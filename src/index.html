@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-white dark:bg-gray-900">
+    <!-- Header -->
+    <header class="h-screen w-screen object-cover">
+        <video class="h-screen w-screen object-cover fixed z-[-1] inset-0; opacity-[15%]" id="background-video" autoplay
+            loop muted>
+            <source src="videos/Bgvid.mp4" type="video/mp4">
+        </video>
+
+        <div class="content px-8 mx-auto max-w-7xl">
+            <nav class="   flex flex-wrap items-center justify-between w-fullnpy-4 md:py-0 px-4  dark:text-white-700  ">
+
+                <div>
+                    <a href="#" class="dark:text-white">
+                        <img src="images/logo.png" alt="logo" srcset="images/logo.png">
+                    </a>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" id="menu-button"
+                    class="h-6 w-6 cursor-pointer md:hidden block dark:text-white" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+
+                <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+                    <ul class="
+                      pt-4
+                      text-base text-gray-700 dark:text-white
+                      md:flex
+                      md:justify-between 
+                      md:pt-0">
+                        <li>
+                            <a class="md:p-4 py-2 block hover:text-green-400  text-green-600" href="index.html">Home</a>
+                        </li>
+
+                        <li>
+                            <a class="md:p-4 py-2 block hover:text-green-400" href="#about">About Me</a>
+                        </li>
+
+                        <li>
+                            <a class="md:p-4 py-2 block hover:text-green-400 " href="#contact">Contact</a>
+                        </li>
+
+                        <li class=" ">
+
+                            <button id="theme-toggle" type="button"
+                                class="text-gray-500  dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mt-2">
+                                <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z">
+                                    </path>
+                                </svg>
+                                <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                        fill-rule="evenodd" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+
+            <div class="relative lg:flex lg:items-center p-4 sm:p-24">
+                <div class="w-full px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
+                    <div class="static border-2 border-green-400">
+                        <h1
+                            class="text-4xl  mt-12 md:text-6xl font-bold mb-4 text-gray-900 text-center dark:text-white">
+                            <span>Boostez</span> vos
+                            performances en trading avec nos outils
+                        </h1>
+                        <div class="absolute bottom-[115%] sm:bottom-[90%] right-[0px] sm:right-[10px]">
+                            <span class="relative top-32 right-0 flex w-60 h-18 ">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                <span
+                                    class="relative  text-center w-full bg-red-500 text-white py-3 rounded-full hover:bg-red-600">GRATUITS
+                                    ! à 0 $</span>
+                            </span>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <p class="text-md mt-12 text-gray-900 text-center dark:text-white">
+                        Devenez un trader d'élite sans dépenser un euro : accédez instantanément à notre arsenal complet
+                        de ressources professionnelles en cliquant maintenant pour transformer vos ambitions en réalité
+                        financière !
+                    </p>
+                    <div
+                        class="animate-bounce max-w-sm rounded overflow-hidden shadow-lg mt-12 max-w-lg mx-auto space-y-4">
+                        <button type="submit"
+                            class="w-full bg-green-500 text-white px-4 py-3 rounded-lg hover:bg-green-600">Send
+                            Message</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- About Section -->
+        <section id="about" class="bg-white dark:bg-gray-600 p-4 sm:p-24">
+
+            <div class="px-4   text-gray-500 dark:text-gray-200">
+                <div class="flex flex-col max-w-6xl mx-auto justify-center md:flex-row">
+
+                    <div class="w-full pt-4  md:w-1/2 ">
+
+                        <dt class="mb-4">
+                            <h3 class="text-2xl font-extrabold leading-9">
+                                Des outils puissants pour transformer votre trading !
+                            </h3>
+                        </dt>
+                        <dd class="mb-16  animation">
+                            <ul>
+                                <li class="flex gap-6 justify-start mt-2">
+
+                                    <svg class="fill-green-500 dark:fill-red-500 w-4" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 462.647 462.647"
+                                        xml:space="preserve">
+                                        <g>
+                                            <path d="M72.767,102.338V65.62c0-8.284-6.716-15-15-15s-15,6.716-15,15v36.718c-18.298,2.566-32.428,18.314-32.428,37.31v201.445
+		c0,18.995,14.129,34.743,32.428,37.31v36.718c0,8.284,6.716,15,15,15s15-6.716,15-15v-36.718
+		c18.298-2.566,32.428-18.314,32.428-37.31V139.647C105.195,120.652,91.065,104.904,72.767,102.338z M75.195,341.093
+		c0,4.236-3.447,7.684-7.684,7.684H48.023c-4.236,0-7.684-3.447-7.684-7.684V139.647c0-4.236,3.447-7.684,7.684-7.684h19.488
+		c4.236,0,7.684,3.447,7.684,7.684V341.093z" />
+                                            <path d="M304.175,77.785V41.067c0-8.284-6.716-15-15-15s-15,6.716-15,15v36.718c-18.299,2.566-32.428,18.315-32.428,37.31v142.487
+		c0,18.994,14.129,34.743,32.428,37.31v152.756c0,8.284,6.716,15,15,15s15-6.716,15-15V294.892
+		c18.299-2.566,32.429-18.315,32.429-37.31V115.095C336.604,96.101,322.474,80.352,304.175,77.785z M306.604,257.582
+		c0,4.236-3.447,7.684-7.684,7.684h-19.489c-4.236,0-7.684-3.447-7.684-7.684V115.095c0-4.236,3.447-7.684,7.684-7.684h19.489
+		c4.236,0,7.684,3.447,7.684,7.684V257.582z" />
+                                            <path d="M188.471,51.718V15c0-8.284-6.716-15-15-15s-15,6.716-15,15v36.718c-18.298,2.566-32.428,18.315-32.428,37.31V249.62
+		c0,18.995,14.129,34.743,32.428,37.31v36.718c0,8.284,6.716,15,15,15s15-6.716,15-15V286.93
+		c18.298-2.566,32.428-18.314,32.428-37.31V89.027C220.899,70.033,206.77,54.284,188.471,51.718z M190.899,249.62
+		c0,4.236-3.447,7.684-7.684,7.684h-19.488c-4.236,0-7.684-3.447-7.684-7.684V89.027c0-4.236,3.447-7.684,7.684-7.684h19.488
+		c4.236,0,7.684,3.447,7.684,7.684V249.62z" />
+                                            <path d="M419.879,148.185V35.479c0-8.284-6.716-15-15-15s-15,6.716-15,15v112.705c-18.298,2.566-32.428,18.315-32.428,37.31
+		v160.593c0,18.995,14.129,34.743,32.428,37.31v36.718c0,8.284,6.716,15,15,15s15-6.716,15-15v-36.718
+		c18.299-2.565,32.429-18.314,32.429-37.31V185.494C452.308,166.5,438.179,150.75,419.879,148.185z M422.308,346.087
+		c0,4.236-3.447,7.684-7.684,7.684h-19.489c-4.236,0-7.684-3.447-7.684-7.684V185.494c0-4.236,3.447-7.684,7.684-7.684h19.489
+		c4.236,0,7.684,3.447,7.684,7.684V346.087z" />
+                                        </g>
+                                    </svg>
+                                    Suivez chaque trade avec précision grâce au journal de trading.
+                                </li>
+                                <li class="flex gap-6 justify-start mt-2">
+                                    <svg class="fill-green-500 dark:fill-red-500 w-4" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 462.647 462.647"
+                                        xml:space="preserve">
+                                        <g>
+                                            <path d="M72.767,102.338V65.62c0-8.284-6.716-15-15-15s-15,6.716-15,15v36.718c-18.298,2.566-32.428,18.314-32.428,37.31v201.445
+c0,18.995,14.129,34.743,32.428,37.31v36.718c0,8.284,6.716,15,15,15s15-6.716,15-15v-36.718
+c18.298-2.566,32.428-18.314,32.428-37.31V139.647C105.195,120.652,91.065,104.904,72.767,102.338z M75.195,341.093
+c0,4.236-3.447,7.684-7.684,7.684H48.023c-4.236,0-7.684-3.447-7.684-7.684V139.647c0-4.236,3.447-7.684,7.684-7.684h19.488
+c4.236,0,7.684,3.447,7.684,7.684V341.093z" />
+                                            <path d="M304.175,77.785V41.067c0-8.284-6.716-15-15-15s-15,6.716-15,15v36.718c-18.299,2.566-32.428,18.315-32.428,37.31v142.487
+c0,18.994,14.129,34.743,32.428,37.31v152.756c0,8.284,6.716,15,15,15s15-6.716,15-15V294.892
+c18.299-2.566,32.429-18.315,32.429-37.31V115.095C336.604,96.101,322.474,80.352,304.175,77.785z M306.604,257.582
+c0,4.236-3.447,7.684-7.684,7.684h-19.489c-4.236,0-7.684-3.447-7.684-7.684V115.095c0-4.236,3.447-7.684,7.684-7.684h19.489
+c4.236,0,7.684,3.447,7.684,7.684V257.582z" />
+                                            <path d="M188.471,51.718V15c0-8.284-6.716-15-15-15s-15,6.716-15,15v36.718c-18.298,2.566-32.428,18.315-32.428,37.31V249.62
+c0,18.995,14.129,34.743,32.428,37.31v36.718c0,8.284,6.716,15,15,15s15-6.716,15-15V286.93
+c18.298-2.566,32.428-18.314,32.428-37.31V89.027C220.899,70.033,206.77,54.284,188.471,51.718z M190.899,249.62
+c0,4.236-3.447,7.684-7.684,7.684h-19.488c-4.236,0-7.684-3.447-7.684-7.684V89.027c0-4.236,3.447-7.684,7.684-7.684h19.488
+c4.236,0,7.684,3.447,7.684,7.684V249.62z" />
+                                            <path d="M419.879,148.185V35.479c0-8.284-6.716-15-15-15s-15,6.716-15,15v112.705c-18.298,2.566-32.428,18.315-32.428,37.31
+v160.593c0,18.995,14.129,34.743,32.428,37.31v36.718c0,8.284,6.716,15,15,15s15-6.716,15-15v-36.718
+c18.299-2.565,32.429-18.314,32.429-37.31V185.494C452.308,166.5,438.179,150.75,419.879,148.185z M422.308,346.087
+c0,4.236-3.447,7.684-7.684,7.684h-19.489c-4.236,0-7.684-3.447-7.684-7.684V185.494c0-4.236,3.447-7.684,7.684-7.684h19.489
+c4.236,0,7.684,3.447,7.684,7.684V346.087z" />
+                                        </g>
+                                    </svg>
+                                    Découvrez les secrets des meilleurs traders dans l’eBook.
+                                </li>
+                                <li class="flex gap-6 justify-start mt-2">
+                                    <svg class="fill-green-500 dark:fill-red-500 w-4" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 462.647 462.647"
+                                        xml:space="preserve">
+                                        <g>
+                                            <path d="M72.767,102.338V65.62c0-8.284-6.716-15-15-15s-15,6.716-15,15v36.718c-18.298,2.566-32.428,18.314-32.428,37.31v201.445
+c0,18.995,14.129,34.743,32.428,37.31v36.718c0,8.284,6.716,15,15,15s15-6.716,15-15v-36.718
+c18.298-2.566,32.428-18.314,32.428-37.31V139.647C105.195,120.652,91.065,104.904,72.767,102.338z M75.195,341.093
+c0,4.236-3.447,7.684-7.684,7.684H48.023c-4.236,0-7.684-3.447-7.684-7.684V139.647c0-4.236,3.447-7.684,7.684-7.684h19.488
+c4.236,0,7.684,3.447,7.684,7.684V341.093z" />
+                                            <path d="M304.175,77.785V41.067c0-8.284-6.716-15-15-15s-15,6.716-15,15v36.718c-18.299,2.566-32.428,18.315-32.428,37.31v142.487
+c0,18.994,14.129,34.743,32.428,37.31v152.756c0,8.284,6.716,15,15,15s15-6.716,15-15V294.892
+c18.299-2.566,32.429-18.315,32.429-37.31V115.095C336.604,96.101,322.474,80.352,304.175,77.785z M306.604,257.582
+c0,4.236-3.447,7.684-7.684,7.684h-19.489c-4.236,0-7.684-3.447-7.684-7.684V115.095c0-4.236,3.447-7.684,7.684-7.684h19.489
+c4.236,0,7.684,3.447,7.684,7.684V257.582z" />
+                                            <path d="M188.471,51.718V15c0-8.284-6.716-15-15-15s-15,6.716-15,15v36.718c-18.298,2.566-32.428,18.315-32.428,37.31V249.62
+c0,18.995,14.129,34.743,32.428,37.31v36.718c0,8.284,6.716,15,15,15s15-6.716,15-15V286.93
+c18.298-2.566,32.428-18.314,32.428-37.31V89.027C220.899,70.033,206.77,54.284,188.471,51.718z M190.899,249.62
+c0,4.236-3.447,7.684-7.684,7.684h-19.488c-4.236,0-7.684-3.447-7.684-7.684V89.027c0-4.236,3.447-7.684,7.684-7.684h19.488
+c4.236,0,7.684,3.447,7.684,7.684V249.62z" />
+                                            <path d="M419.879,148.185V35.479c0-8.284-6.716-15-15-15s-15,6.716-15,15v112.705c-18.298,2.566-32.428,18.315-32.428,37.31
+v160.593c0,18.995,14.129,34.743,32.428,37.31v36.718c0,8.284,6.716,15,15,15s15-6.716,15-15v-36.718
+c18.299-2.565,32.429-18.314,32.429-37.31V185.494C452.308,166.5,438.179,150.75,419.879,148.185z M422.308,346.087
+c0,4.236-3.447,7.684-7.684,7.684h-19.489c-4.236,0-7.684-3.447-7.684-7.684V185.494c0-4.236,3.447-7.684,7.684-7.684h19.489
+c4.236,0,7.684,3.447,7.684,7.684V346.087z" />
+                                        </g>
+                                    </svg>
+                                    Améliorez vos stratégies et gagnez du temps en analysant vos performances.
+                                </li>
+                                <li class="flex gap-6 justify-start mt-2">
+                                    <svg class="fill-green-500 dark:fill-red-500 w-4" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 462.647 462.647"
+                                        xml:space="preserve">
+                                        <g>
+                                            <path d="M72.767,102.338V65.62c0-8.284-6.716-15-15-15s-15,6.716-15,15v36.718c-18.298,2.566-32.428,18.314-32.428,37.31v201.445
+c0,18.995,14.129,34.743,32.428,37.31v36.718c0,8.284,6.716,15,15,15s15-6.716,15-15v-36.718
+c18.298-2.566,32.428-18.314,32.428-37.31V139.647C105.195,120.652,91.065,104.904,72.767,102.338z M75.195,341.093
+c0,4.236-3.447,7.684-7.684,7.684H48.023c-4.236,0-7.684-3.447-7.684-7.684V139.647c0-4.236,3.447-7.684,7.684-7.684h19.488
+c4.236,0,7.684,3.447,7.684,7.684V341.093z" />
+                                            <path d="M304.175,77.785V41.067c0-8.284-6.716-15-15-15s-15,6.716-15,15v36.718c-18.299,2.566-32.428,18.315-32.428,37.31v142.487
+c0,18.994,14.129,34.743,32.428,37.31v152.756c0,8.284,6.716,15,15,15s15-6.716,15-15V294.892
+c18.299-2.566,32.429-18.315,32.429-37.31V115.095C336.604,96.101,322.474,80.352,304.175,77.785z M306.604,257.582
+c0,4.236-3.447,7.684-7.684,7.684h-19.489c-4.236,0-7.684-3.447-7.684-7.684V115.095c0-4.236,3.447-7.684,7.684-7.684h19.489
+c4.236,0,7.684,3.447,7.684,7.684V257.582z" />
+                                            <path d="M188.471,51.718V15c0-8.284-6.716-15-15-15s-15,6.716-15,15v36.718c-18.298,2.566-32.428,18.315-32.428,37.31V249.62
+c0,18.995,14.129,34.743,32.428,37.31v36.718c0,8.284,6.716,15,15,15s15-6.716,15-15V286.93
+c18.298-2.566,32.428-18.314,32.428-37.31V89.027C220.899,70.033,206.77,54.284,188.471,51.718z M190.899,249.62
+c0,4.236-3.447,7.684-7.684,7.684h-19.488c-4.236,0-7.684-3.447-7.684-7.684V89.027c0-4.236,3.447-7.684,7.684-7.684h19.488
+c4.236,0,7.684,3.447,7.684,7.684V249.62z" />
+                                            <path d="M419.879,148.185V35.479c0-8.284-6.716-15-15-15s-15,6.716-15,15v112.705c-18.298,2.566-32.428,18.315-32.428,37.31
+v160.593c0,18.995,14.129,34.743,32.428,37.31v36.718c0,8.284,6.716,15,15,15s15-6.716,15-15v-36.718
+c18.299-2.565,32.429-18.314,32.429-37.31V185.494C452.308,166.5,438.179,150.75,419.879,148.185z M422.308,346.087
+c0,4.236-3.447,7.684-7.684,7.684h-19.489c-4.236,0-7.684-3.447-7.684-7.684V185.494c0-4.236,3.447-7.684,7.684-7.684h19.489
+c4.236,0,7.684,3.447,7.684,7.684V346.087z" />
+                                        </g>
+                                    </svg>
+                                    Prenez des décisions plus éclairées avec des outils simples et efficaces.
+                                </li>
+                            </ul>
+                        </dd>
+
+
+                    </div>
+                    <div class="w-full  text-3xl font-extrabold leading-9 md:w-1/3 ">
+                        <div class=" p-2 hover:border-2 hover:border-green-400  rounded-lg ">
+                            <img src="images/outils.png" class=" rounded-lg " alt="Images" />
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white dark:bg-gray-900 p-4 sm:p-24">
+            <div class="relative lg:flex lg:items-center p-24  text-gray-500 dark:text-gray-200">
+                <div class="w-full text-center z-20">
+                    <h3 class="text-2xl font-extrabold leading-9 my-16">
+                        Ces outils sont faits pour vous, Si :
+                    </h3>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-4">
+
+                        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-green-500">
+
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2">Vous débutez dans le trading.</div>
+                                <p class="text-gray-700 text-base">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                                    Maiores et perferendis eaque, exercitationem praesentium nihil.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-green-500">
+
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2">Vous manquez de structure dans vos
+                                    trades.</div>
+                                <p class="text-gray-700 text-base">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                                    Maiores et perferendis eaque, exercitationem praesentium nihil.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-green-500">
+
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2">Vous rêvez de devenir un trader
+                                    rentable.</div>
+                                <p class="text-gray-700 text-base">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                                    Maiores et perferendis eaque, exercitationem praesentium nihil.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-green-500">
+
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2">Vous avez déjà essayé plusieurs
+                                    stratégies.
+                                </div>
+
+                                <p class="text-gray-700 text-base">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                                    Maiores et perferendis eaque, exercitationem praesentium nihil.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-green-500">
+
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2">Vous avez déjà essayé plusieurs
+                                    stratégies.
+                                </div>
+
+                                <p class="text-gray-700 text-base">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                                    Maiores et perferendis eaque, exercitationem praesentium nihil.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-green-500">
+
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2">Vous souhaitez gagner en discipline.
+                                </div>
+
+                                <p class="text-gray-700 text-base">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                                    Maiores et perferendis eaque, exercitationem praesentium nihil.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-green-500">
+
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2">Vous voulez un guide simple et efficace.
+                                </div>
+
+                                <p class="text-gray-700 text-base">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                                    Maiores et perferendis eaque, exercitationem praesentium nihil.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-green-500">
+
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2">Vous êtes prêt à investir du temps dans
+                                    votre apprentissage.
+                                </div>
+
+                                <p class="text-gray-700 text-base">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                                    Maiores et perferendis eaque, exercitationem praesentium nihil.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-green-500">
+
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2">Vous cherchez un outil professionnel.
+                                </div>
+
+                                <p class="text-gray-700 text-base">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                                    Maiores et perferendis eaque, exercitationem praesentium nihil.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-green-500">
+
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2">Vous voulez maximiser vos chances de
+                                    réussite.
+                                </div>
+
+                                <p class="text-gray-700 text-base">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                                    Maiores et perferendis eaque, exercitationem praesentium nihil.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about" class="bg-white dark:bg-gray-600 p-24">
+            <h3 class="text-2xl font-extrabold leading-9 my-16">
+                Ces outils sont faits pour vous, Si :
+            </h3>
+            <div class="relative lg:flex lg:items-center">
+                <!-- Carousel Wrapper -->
+                <div id="carousel" class="overflow-hidden relative lg:flex lg:items-center p-4 sm:p-12">
+                    <!-- Slides -->
+                    <div class="flex transition-transform duration-500 ease-in-out" style="transform: translateX(0);">
+                        <div class="flex-shrink-0  w-[100%]  p-8 ">
+                            <img src="images/1.jpg" class=" rounded-lg"  alt="Images" height="350px"/>
+                        </div>
+                        <div class="flex-shrink-0 w-[100%]   p-8 ">
+                            <img src="images/2.jpg" class=" rounded-lg " height="350px"/>
+                        </div>
+                        <div class="flex-shrink-0 w-[100%]  p-8 ">
+                            <img src="images/3.jpg" class=" rounded-lg " alt="Images" height="350px"/>
+                        </div>
+                        <div class="flex-shrink-0 w-[100%]  p-8 ">
+                            <img src="images/4.jpg" class=" rounded-lg " alt="Images" height="350px"/>
+                        </div>
+                        <div class="flex-shrink-0 w-[100%]  p-8 ">
+                            <img src="images/5.jpg" class=" rounded-lg "  alt="Images" height="350px"/>
+                        </div>
+                        <div class="flex-shrink-0 w-[100%] p-8 ">
+                            <img src="images/6.jpg" class=" rounded-lg "  alt="Images" height="350px"/>
+                        </div>
+                        <div class="flex-shrink-0 w-[100%] p-8 ">
+                            
+                            <img src="images/7.jpg" class=" rounded-lg "  alt="Images" height="350px"/>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <button id="prev"
+                    class="absolute top-1/2 -left-4 transform -translate-y-1/2 bg-gray-800 text-white w-16 h-16  rounded-md">
+                    &#8592;
+                </button>
+                <button id="next"
+                    class="absolute top-1/2 -right-4 transform -translate-y-1/2 bg-green-800 text-white w-16 h-16  rounded-md">
+                    &#8594;
+                </button>
+            </div>
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about" class="bg-white dark:bg-gray-600 p-24">
+            <div class="px-4 py-12  text-gray-500 dark:text-gray-200">
+                <div class="flex flex-col max-w-6xl mx-auto md:flex-row">
+
+                    <div class="w-full mr-8 text-3xl font-extrabold leading-9 md:w-1/3 ">
+                        <div class=" p-2 hover:border-2 hover:border-green-400  rounded-lg ">
+                            <img src="images/van.jpg" class=" rounded-lg " alt="Images" />
+                        </div>
+
+
+                    </div>
+                    <dl class="w-full md:w-2/3 mt-8">
+                        <dt class="mb-4">
+                            <h3 class="text-xl font-semibold text-black dark:text-white">
+                                QUI SUIS-JE ?
+                            </h3>
+                        </dt>
+                        <dd class="mb-16 animation">
+                            <p>
+                                Je m’appelle ESAMA KOSO DESIRE. Dès mes années universitaires, j’ai rapidement réalisé
+                                que le monde du travail conventionnel ne me correspondait pas. En 2019, animé par une
+                                soif d’indépendance et d’innovation, j’ai décidé de me lancer dans le trading, cherchant
+                                à explorer des opportunités nouvelles et prometteuses.
+
+                                Au départ, je me suis également investi dans diverses activités en ligne, comme le
+                                e-commerce, le marketing relationnel et les crypto-monnaies. Mon objectif était clair :
+                                prouver à mon entourage que j’avais découvert une opportunité révolutionnaire.
+                                Cependant, ces premières expériences se sont soldées par des échecs retentissants, me
+                                laissant face à des défis que je n’avais pas anticipés.
+
+                                En 2020, avec la pandémie de Covid-19 et l’émergence des Prop Firms, ma vision du
+                                trading a changé radicalement. Cette période de crise a marqué un tournant dans ma vie.
+                                Après avoir épuisé toutes mes économies dans des challenges infructueux, j’ai compris
+                                que le trading ne se résumait pas à de simples clics derrière un écran. Cette prise de
+                                conscience m’a poussé à reconsidérer mon approche.
+
+                                J’ai décidé de m’investir pleinement, en privilégiant l’apprentissage approfondi et la
+                                pratique rigoureuse. Cette décision a été déterminante. Grâce à une persévérance
+                                inébranlable, les résultats ont commencé à se manifester au fil des mois. Aujourd’hui,
+                                je suis
+                            </p>
+                        </dd>
+
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-white dark:bg-gray-800">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Contact Me</h2>
+                <form class="max-w-lg mx-auto space-y-4">
+                    <input type="text" placeholder="Your Name" class="w-full px-4 py-3 border rounded-lg">
+                    <input type="email" placeholder="Your Email" class="w-full px-4 py-3 border rounded-lg">
+                    <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-3 border rounded-lg"></textarea>
+                    <button type="submit"
+                        class="w-full bg-green-500 text-white px-4 py-3 rounded-lg hover:bg-green-600">Send
+                        Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 text-center py-4">
+        © 2025 VANTRADING. Tous droits réservés.Réalisé par Isaac Kuakua
+    </footer>
+
+
+    <script src="../path/to/flowbite/dist/flowbite.bundle.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>
